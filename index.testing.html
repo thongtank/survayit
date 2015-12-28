@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survat IT 2556 Testing</title>
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/screen.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <style type="text/css" media="screen">
+    /* Paste this css to your style sheet file or under head tag */
+    /* This only works with JavaScript, if it's not present, don't show loader */
+    
+    .se-pre-con {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        background: url(images/Preloader_3.gif) center no-repeat #fff;
+        opacity: 0.4;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="se-pre-con"></div>
+    <article class="container">
+        <header>
+            <hgroup>
+                <h1>I.T. SURVAY</h1>
+                <h5>แบบสำรวจการมีงานทำหรือศึกษาต่อของผู้สำเร็จการศึกษา สาขาเทคโนโลยีสารสนเทศ</h5>
+            </hgroup>
+        </header>
+        <section>
+            <form class="role" id="myForm" method="POST">
+                <div class="row">
+                    <div class="col-md-12 form-group">
+                        <label for="gen" class="control-label">รุ่นที่</label>
+                        <select name="year" id="year" class="form-control">
+                            <option value="">เลือกรุ่น / ปีการศึกษา</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-2 form-group">
+                        <label for="gender" class="control-label">คำนำหน้า</label>
+                        <select name="gender" id="gender" class="form-control">
+                            <option value="1">นาย</option>
+                            <option value="2">นาง</option>
+                            <option value="3">นางสาว</option>
+                        </select>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group has-feedback">
+                            <label for="firstname" class="control-label">ชื่อ</label>
+                            <input type="text" class="form-control" id="firstname" name="firstname" required>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="form-group has-feedback">
+                            <label for="lastname" class="control-label">นามสกุล</label>
+                            <input type="text" class="form-control" id="lastname" name="lastname" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="checkbox col-md-12 text-center">
+                        <label>
+                            <input type="checkbox" value="Y" id="con"> คุณยินยอมการให้ข้อมูลและตอบแบบสำรวจนี้หรือไม่ ?
+                        </label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group text-center col-md-12">
+                        <button type="submit" class="btn btn-primary validate">ตรวจสอบข้อมูล</button>
+                        <button type="submit" class="btn btn-success save">บันทึกข้อมูล</button>
+                        <button class="btn btn-danger" formnovalidate type="reset">ยกเลิก</button>
+                    </div>
+                </div>
+            </form>
+        </section>
+    </article>
+</body>
+<!-- src scripts -->
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="js/jquery.confirm-master/jquery.confirm.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/provinces.js"></script>
+<script src="js/gen.js"></script>
+
+</html>

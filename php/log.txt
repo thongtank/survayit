@@ -1,0 +1,7 @@
+stdClass Object
+(
+    [year] => 2557
+    [gender] => 1
+    [firstname] => panchai
+    [lastname] => prasomepech
+)
