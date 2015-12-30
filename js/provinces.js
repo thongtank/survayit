@@ -1,7 +1,17 @@
+<<<<<<< HEAD
 // LOAD Province, Aumphur and District from log not database
 $(function() {
     $.ajax({
             url: 'php/logs/provinces.txt',
+=======
+$(function() {
+    $.ajax({
+            method: 'POST',
+            url: 'php/provinces.php',
+            data: {
+                find: 'province'
+            },
+>>>>>>> origin/master
             dataType: "json",
             beforeSend: function() {
                 $('.se-pre-con').show();
@@ -59,6 +69,7 @@ $(function() {
      * @return {}         
      */
     function getProvinceDetail(element, id, table) {
+<<<<<<< HEAD
         var path = '';
         if (table == 'amphur') {
             path = 'php/logs/amphur.txt';
@@ -69,6 +80,16 @@ $(function() {
         $.ajax({
                 url: path,
                 dataType: 'json',
+=======
+        $.ajax({
+                url: 'php/provinces.php',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    find: table,
+                    ref_id: id
+                },
+>>>>>>> origin/master
                 beforeSend: function() {
                     $('.se-pre-con').show();
                 },
@@ -79,6 +100,7 @@ $(function() {
             .done(function(res) {
                 if (table == 'amphur') {
                     element.html('<option value="">เลือกอำเภอ</option>');
+<<<<<<< HEAD
                     /*
                     $.each(res, function(index, val) {
                         element.append('<option value="' + val.AMPHUR_ID + '">' + val.AMPHUR_NAME + '</option>');
@@ -95,6 +117,15 @@ $(function() {
                         if (val.AMPHUR_ID == id) {
                             element.append('<option value="' + val.DISTRICT_ID + '">' + val.DISTRICT_NAME + '</option>');
                         }
+=======
+                    $.each(res, function(index, val) {
+                        element.append('<option value="' + val.AMPHUR_ID + '">' + val.AMPHUR_NAME + '</option>');
+                    });
+                } else {
+                    element.html('<option value="">เลือกตำบล</option>');
+                    $.each(res, function(index, val) {
+                        element.append('<option value="' + val.DISTRICT_ID + '">' + val.DISTRICT_NAME + '</option>');
+>>>>>>> origin/master
                     });
                 }
 

@@ -1,5 +1,6 @@
 stdClass Object
 (
+<<<<<<< HEAD
     [year] => 2558
     [gender] => 1
     [firstname] => Panchai
@@ -40,4 +41,10 @@ stdClass Object
     [detail_gender] => 1
     [detail_firstname] => Panchai
     [detail_lastname] => Prasompech
+=======
+    [year] => 2557
+    [gender] => 1
+    [firstname] => panchai
+    [lastname] => prasomepech
+>>>>>>> origin/master
 )

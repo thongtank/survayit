@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-uglify');
@@ -23,3 +24,30 @@ module.exports = function(grunt) {
         }
     });
 }
+=======
+module.exports = function(grunt) {
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+
+    grunt.initConfig({
+        watch: {
+            files: ['*.html', '*.php'],
+            options: {
+                livereload: true
+            }
+        },
+        uglify: {
+            my_target: {
+                files: [{
+                    expand: 1,
+                    cwd: 'js/',
+                    ext: '.min.js',
+                    src: ['*.js'],
+                    dest: 'js/'
+                }]
+            },
+            options: {}
+        }
+    });
+}
+>>>>>>> origin/master
