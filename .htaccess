@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteRule ^admin/management$ admin/management.html [L]
+

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Management Tool</title>
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/screen.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/loading.css">
+</head>
+
+<body>
+    <div class="se-pre-con"></div>
+    <article class="container">
+        <header>
+            <hgroup>
+                <h1>Admin Login</h1>
+            </hgroup>
+        </header>
+        <section>
+            <form action="#" id="adminForm" method="POST">
+                <div class="form-group has-feedback">
+                    <label for="username">ชื่อผู้ใช้</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="username" required minlength="2" maxlength="5" pattern="[a-zA-Z0-9]+">
+                </div>
+                <div class="form-group">
+                    <label for="pwd">รหัสผ่าน</label>
+                    <input type="password" class="form-control" id="pwd" name="pwd" placeholder="password" required maxlength="10" minlength="6">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-default save">เข้าสู่ระบบ</button>
+                </div>
+            </form>
+        </section>
+    </article>
+    <!-- src script -->
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>
