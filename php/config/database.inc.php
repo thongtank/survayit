@@ -19,11 +19,7 @@ class database {
             $this->mysqli->set_charset("UTF8");
             return true;
         } else {
-<<<<<<< HEAD
             print $this->mysqli->connect_error;
-=======
-            echo $this->mysqli->connect_errno;
->>>>>>> origin/master
         }
     }
 
