@@ -10,10 +10,7 @@ use config\database;
 
 class Research extends database {
     public function set($data, $table) {
-<<<<<<< HEAD
         // Write to log
-=======
->>>>>>> origin/master
         $handle = fopen('log.txt', 'w+');
         fwrite($handle, print_r($data, 1));
         fclose($handle);
@@ -38,11 +35,7 @@ class Research extends database {
                 $comma = '';
             }
             $fields .= $key . '' . $comma;
-<<<<<<< HEAD
             $values .= '\'' . trim($value) . '\'' . $comma;
-=======
-            $values .= '\'' . $value . '\'' . $comma;
->>>>>>> origin/master
             $round++;
         }
 
@@ -59,11 +52,7 @@ class Research extends database {
 
 $rs = new Research;
 $result = $rs->set($json, 'research');
-<<<<<<< HEAD
 if ($result === true) {
-=======
-if ($research === true) {
->>>>>>> origin/master
     echo "success";
 } else {
     echo $result;
