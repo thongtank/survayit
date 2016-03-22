@@ -40,12 +40,12 @@ class Research extends database {
         }
 
         $sql = 'insert into ' . $table . ' (id,' . $fields . ',date) values (NULL,' . $values . ',NOW());';
-        return parent::query($sql, $rows, $num_rows);
+        return parent::query($sql, $rows, $num_rows, $last_id);
     }
 
     public function get() {
         $sql = 'select * from research where 1;';
-        parent::query($sql, $rows, $num_rows);
+        parent::query($sql, $rows, $num_rows, $last_id);
         print_r($rows);
     }
 }

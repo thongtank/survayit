@@ -28,7 +28,7 @@ class database {
         $this->mysqli = null;
     }
 
-    public function query($sql, &$rows, &$num_rows) {
+    public function query($sql, &$rows, &$num_rows, &$last_id) {
         if (self::connection()) {
             // $sql = 'update `itsurvay`.`research` SET `firstname` = \'TONG\' WHERE `research`.`id` = 1;';
             // $sql = 'select * from research;';
@@ -42,6 +42,7 @@ class database {
                     $result->free();
                 } else {
                     if ($result) {
+                        $last_id = $this->mysqli->insert_id;
                         $rows = null;
                         $num_rows = 0;
                     } else {
